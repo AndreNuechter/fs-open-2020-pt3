@@ -1,0 +1,1 @@
+module.exports = (method, route, cb) => ({ method, route, cb });

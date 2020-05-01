@@ -1,0 +1,1 @@
+module.exports = db => (_, res) => res.json(db.persons);

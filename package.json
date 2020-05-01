@@ -1,0 +1,27 @@
+{
+    "name": "fs-open-2020-pt3",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "dev": "nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AndreNuechter/fs-open-2020-pt3.git"
+    },
+    "author": "Andre Nuechter",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/AndreNuechter/fs-open-2020-pt3/issues"
+    },
+    "homepage": "https://github.com/AndreNuechter/fs-open-2020-pt3#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
+}
