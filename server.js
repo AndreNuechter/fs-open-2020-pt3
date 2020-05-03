@@ -5,7 +5,7 @@ const morganConfig = require('./morgan-config');
 const routes = require('./src/routes');
 const app = express();
 
-app.use(express.json(), morgan(morganConfig), cors());
+app.use(express.static('build'), express.json(), morgan(morganConfig), cors());
 routes.forEach(
     ({ method, route, cb }) => app[method](route, cb)
 );
