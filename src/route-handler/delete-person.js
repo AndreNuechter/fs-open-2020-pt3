@@ -1,6 +1,5 @@
-module.exports = db => (req, res) => {
+module.exports = Entry => async (req, res) => {
     const { id } = req.params;
-
-    db.persons = db.persons.filter(p => p.id !== +id);
-    res.json(db.persons);
+    await Entry.findByIdAndDelete(id);
+    res.json(await Entry.find({}));
 };
