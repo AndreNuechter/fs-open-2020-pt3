@@ -13,7 +13,7 @@ module.exports = Entry => async (req, res) => {
         throwError('The contact isn\'t in storage.', 'NotFoundError');
     }
 
-    if (person.name !== name) {
+    if (person.name === name) {
         throwError('Validation failed: The given name differs from that on the entry with the requested id', 'ValidationError');
     }
 

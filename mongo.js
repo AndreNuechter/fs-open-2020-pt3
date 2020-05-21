@@ -10,26 +10,26 @@ const Entry = mongoose.model(
     'Entry',
     new mongoose.Schema({
         name: String,
-        number: String,
+        number: String
     })
 );
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
-if (name && number) new Entry({
-        name,
-        number,
-    })
-    .save()
-    .then(() => {
-        console.log(`Added ${name} number ${number} to the phonebook`);
-        mongoose.connection.close();
-    });
-else Entry
-    .find({})
-    .then(result => {
-        result.forEach(entry => {
-            console.log(entry);
-        })
-        mongoose.connection.close();
-    });
+if (name && number) {
+    new Entry({ name, number })
+        .save()
+        .then(() => {
+            console.log(`Added ${name} number ${number} to the phonebook`);
+            mongoose.connection.close();
+        });
+} else {
+    Entry
+        .find({})
+        .then(result => {
+            result.forEach(entry => {
+                console.log(entry);
+            });
+            mongoose.connection.close();
+        });
+}

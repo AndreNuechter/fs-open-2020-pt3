@@ -13,10 +13,11 @@ const schema = new mongoose.Schema({
         type: String,
         minlength: 8,
         required: true
-    },
+    }
 });
 
-mongoose.connect(url, {
+mongoose.connect(url,
+    {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
